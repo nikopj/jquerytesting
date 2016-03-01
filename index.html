@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>imisstheoldkanye</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(document).ready(function(){
+
+        $(".red").click(function(){
+          $(".traffic, h1").addClass("secret");
+          $(".kred, h2").removeClass("secret");
+        });
+        $(".kred").click(function(){
+          $(".traffic, h1").removeClass("secret");
+          $(".kred, h2").addClass("secret");
+        });
+
+        $(".yellow").click(function(){
+          $(".traffic, h1").addClass("secret");
+          $(".kyellow, h2").removeClass("secret");
+        });
+        $(".kyellow").click(function(){
+          $(".traffic, h1").removeClass("secret");
+          $(".kyellow, h2").addClass("secret");
+        });
+
+        $(".green").click(function(){
+          $(".traffic, h1").addClass("secret");
+          $(".kgreen, h2").removeClass("secret");
+        });
+        $(".kgreen").click(function(){
+          $(".traffic, h1").removeClass("secret");
+          $(".kgreen, h2").addClass("secret");
+        });
+
+      });
+    </script>
+    <style>
+
+      .secret {
+        display:none;
+      }
+      img{
+        margin:0;
+        padding:0;
+        align-self: center;
+      }
+
+
+    </style>
+  </head>
+  <body>
+
+    <h1>Click the traffic lights!</h1>
+    <h2 class="secret">Click again to go back!</h2>
+    <section class="traffic">
+      <img class="red" src="imgs/trafficRed.jpg" width="146px">
+      <img class="yellow" src="imgs/trafficYellow.jpg" width="111px">
+      <img class="green" src="imgs/trafficGreen.jpg" width="143px">
+    </section>
+    <section class="kanye">
+      <img class="kred secret" src="imgs/reallymad.jpg" width="300px">
+      <img class="kyellow secret" src="imgs/mad.jpg" width="300px">
+      <img class="kgreen secret" src="imgs/icecream.jpg" width="300px">
+    </section>
+
+
+  </body>
+</html>
