@@ -8,35 +8,41 @@
 
         $(".red").click(function(){
           $(".traffic, h1").addClass("secret");
-          $(".kred, h2").removeClass("secret");
-          $("body, h1, h2").addClass("red");
+          $(".kanye, h2").removeClass("secret");
+          $("body").addClass("red");
+          $(".kanye").addClass("reallymad");
         });
-        $(".kred").click(function(){
+        $(".kanye").click(function(){
           $(".traffic, h1").removeClass("secret");
-          $(".kred, h2").addClass("secret");
-          $("body, h1, h2").removeClass("red");
+          $(".kanye, h2").addClass("secret");
+          $("body").removeClass("red");
+          $(".kanye").removeClass("reallymad");
         });
 
         $(".yellow").click(function(){
           $(".traffic, h1").addClass("secret");
-          $(".kyellow, h2").removeClass("secret");
-          $("body, h1, h2").addClass("yellow");
+          $(".kanye, h2").removeClass("secret");
+          $("body").addClass("yellow");
+          $(".kanye").addClass("mad");
         });
-        $(".kyellow").click(function(){
+        $(".kanye").click(function(){
           $(".traffic, h1").removeClass("secret");
-          $(".kyellow, h2").addClass("secret");
-          $("body, h1, h2").removeClass("yellow");
+          $(".kanye, h2").addClass("secret");
+          $("body").removeClass("yellow");
+          $(".kanye").removeClass("mad");
         });
 
         $(".green").click(function(){
           $(".traffic, h1").addClass("secret");
-          $(".kgreen, h2").removeClass("secret");
-          $("body, h1, h2").addClass("green");
+          $(".kanye, h2").removeClass("secret");
+          $("body").addClass("green");
+          $(".kanye").addClass("icecream");
         });
-        $(".kgreen").click(function(){
+        $(".kanye").click(function(){
           $(".traffic, h1").removeClass("secret");
-          $(".kgreen, h2").addClass("secret");
-          $("body, h1, h2").removeClass("green");
+          $(".kanye, h2").addClass("secret");
+          $("body").removeClass("green");
+          $(".kanye").removeClass("icecream");
         });
 
       });
@@ -46,18 +52,36 @@
         background-color: red;
         color:white;
       }
+      .reallymad{
+        background-image: url(imgs/reallymad.jpg);
+        width:624px;
+        height:351px;
+      }
       .yellow{
         background: yellow;
+      }
+      .mad{
+        background-image: url(imgs/mad.jpg);
+        width:560px;
+        height:670px;
       }
       .green{
         background-color: green;
         color:white;
       }
+      .icecream{
+        background-image: url(imgs/icecream.jpg);
+        width:757px;
+        height:500px;
+      }
+      .traffic img{
+        background-color:inherit;
+      }
       .secret {
         display:none;
       }
       body{
-
+        -webkit-transition: background-color, 1s;
       }
       h1, h2{
         display: flex;
@@ -66,6 +90,7 @@
         padding:30px;
         padding-bottom:0;
         font-size: 50px;
+        background-color: transparent;
       }
       h2{
         font-size: 20px;
@@ -75,15 +100,19 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        align-self: center;
         width:auto;
         padding-top:300px;
+      }
+      .kanye {
+        background-size:cover;
       }
       img{
         margin:0;
         padding:0;
         background-size: cover;
       }
-      .kred, .kgreen{
+      /*.kred, .kgreen{
         width:600px;
         border: 10px solid pink;
       }
@@ -91,7 +120,7 @@
         border: 10px solid pink;
         width:560px;
         height:670px;
-      }
+      }*/
 
 
     </style>
@@ -101,14 +130,16 @@
     <h1>Click the traffic lights!</h1>
     <h2 class="secret">Click again to go back!</h2>
     <section class="traffic">
-      <img class="red" src="imgs/trafficRed.jpg" width="146px">
-      <img class="yellow" src="imgs/trafficYellow.jpg" width="111px">
-      <img class="green" src="imgs/trafficGreen.jpg" width="143px">
+      <img class="red" src="imgs/trafficRed.png" width="146px">
+      <img class="yellow" src="imgs/trafficYellow.png" width="111px">
+      <img class="green" src="imgs/trafficGreen.png" width="143px">
     </section>
-    <section class="kanye">
-      <img class="kred secret" src="imgs/reallymad.jpg">
+    <section>
+      <div class="kanye">
+      <!-- <img class="kred secret" src="imgs/reallymad.jpg">
       <img class="kyellow secret" src="imgs/mad.jpg" width="560px">
-      <img class="kgreen secret" src="imgs/icecream.jpg">
+      <img class="kgreen secret" src="imgs/icecream.jpg"> -->
+      </div>
     </section>
 
 
