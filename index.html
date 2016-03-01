@@ -9,47 +9,80 @@
         $(".red").click(function(){
           $(".traffic, h1").addClass("secret");
           $(".kred, h2").removeClass("secret");
+          $("body, h1, h2").addClass("red");
         });
         $(".kred").click(function(){
           $(".traffic, h1").removeClass("secret");
           $(".kred, h2").addClass("secret");
+          $("body, h1, h2").removeClass("red");
         });
 
         $(".yellow").click(function(){
           $(".traffic, h1").addClass("secret");
           $(".kyellow, h2").removeClass("secret");
+          $("body, h1, h2").addClass("yellow");
         });
         $(".kyellow").click(function(){
           $(".traffic, h1").removeClass("secret");
           $(".kyellow, h2").addClass("secret");
+          $("body, h1, h2").removeClass("yellow");
         });
 
         $(".green").click(function(){
           $(".traffic, h1").addClass("secret");
           $(".kgreen, h2").removeClass("secret");
+          $("body, h1, h2").addClass("green");
         });
         $(".kgreen").click(function(){
           $(".traffic, h1").removeClass("secret");
           $(".kgreen, h2").addClass("secret");
+          $("body, h1, h2").removeClass("green");
         });
 
       });
     </script>
     <style>
-
+      .red{
+        background-color: red;
+      }
+      .yellow{
+        background: yellow;
+      }
+      .green{
+        background-color: green;
+      }
       .secret {
         display:none;
+      }
+      body{
+
+      }
+      h1, h2{
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        padding:30px;
+        padding-bottom:0;
+        font-size: 50px;
+      }
+      h2{
+        font-size: 20px;
       }
       section{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width:auto;
+        padding-top:300px;
       }
       img{
         margin:0;
         padding:0;
       }
       .kanye img{
-        width:50vw;
+        width:600px;
+        height:auto;
       }
 
 
